@@ -86,6 +86,15 @@ app.get('/', (req, res) => {
     });
 });
 
+// New endpoint for auto-deploy testing
+app.get('/api/info', (req, res) => {
+    res.json({
+        status: "API is running",
+        message: "This is the new /api/info endpoint for auto-deploy testing",
+        timestamp: new Date().toISOString()
+    });
+});
+
 // AUTHENTICATION ROUTES
 
 // POST /api/register - Register new user
